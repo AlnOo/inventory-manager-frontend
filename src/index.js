@@ -22,5 +22,8 @@ const store = createStore(
     composeEnhancers(applyMiddleware(thunk))
 )
 
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'))
+//ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'))
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<Provider store={store}><App /></Provider>)
 registerServiceWorker()
