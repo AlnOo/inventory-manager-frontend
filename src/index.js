@@ -1,10 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import "bootstrap/dist/js/bootstrap";
-import * as bootstrap from 'bootstrap';
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
+import ReactDOM from "react-dom/client"
+import { render } from "react-dom/client"
+import { legacy_createStore as createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import authReducer from './store/reducers/authReducer'
 import mainReducer from './store/reducers/mainReducer'
