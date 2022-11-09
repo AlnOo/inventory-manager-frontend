@@ -1,12 +1,12 @@
 import React from 'react'
 import {
     FormGroup,
-    ControlLabel,
+    FormLabel,
     FormControl,
-    HelpBlock,
+    FormText,
     Button,
     Col
-} from "react-bootstrap/lib/"
+} from "react-bootstrap"
 
 const createAccount = (props) => {
 

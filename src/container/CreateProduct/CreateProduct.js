@@ -4,12 +4,12 @@ import * as actionTypes from '../../store/actions'
 import axios from 'axios'
 import {
     FormGroup,
-    ControlLabel,
+    FormLabel,
     FormControl,
-    HelpBlock,
+    FormText,
     Button,
     Col
-} from "react-bootstrap/lib/"
+} from "react-bootstrap"
 
 class CreateProduct extends Component {
 

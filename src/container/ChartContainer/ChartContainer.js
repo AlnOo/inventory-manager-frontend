@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 // import * as actionTypes from '../../store/actions'
-import { Col } from "react-bootstrap/lib/"
+import { Col } from "react-bootstrap"
 import axios from 'axios'
 import { Line } from 'react-chartjs-2'
 

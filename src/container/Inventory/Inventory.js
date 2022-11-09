@@ -7,14 +7,13 @@ import {
     ButtonToolbar, 
     Modal, 
     FormGroup, 
-    ControlLabel, 
-    HelpBlock, 
+    FormLabel, 
+    FormText, 
     FormControl 
-} from "react-bootstrap/lib/"
+} from "react-bootstrap"
 import axios from 'axios'
 import * as actionTypes from '../../store/actions'
-import Refresh from 'react-icons/lib/md/autorenew'
-
+import BiRefresh from 'react-icons/bi'
 
 
 class Inventory extends Component {

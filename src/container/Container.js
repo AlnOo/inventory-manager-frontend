@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Button, ButtonToolbar } from 'react-bootstrap/lib/'
+import { Button, ButtonToolbar } from 'react-bootstrap'
 import * as actionTypes from '../store/actions'
 import LoginContainer from './LoginContainer/LoginContainer'
 import CreateAccountContainer from './CreateAccountContainer/CreateAccountContainer'

@@ -6,13 +6,13 @@ import {
     Modal, 
     Button, 
     FormGroup, 
-    ControlLabel, 
-    HelpBlock,
+    FormLabel, 
+    FormText,
     FormControl
- } from 'react-bootstrap/lib/'
+ } from 'react-bootstrap'
 import * as actionTypes from '../../store/actions'
 import axios from 'axios'
-import Refresh from 'react-icons/lib/md/autorenew'
+import BiRefresh from 'react-icons/bi'
 
 class AddToStockButtons extends Component {
 

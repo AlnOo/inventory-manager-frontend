@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ProductButton from '../../components/SellProducts/SellProductButtons'
-import { ButtonToolbar, Button } from 'react-bootstrap/lib/'
+import { ButtonToolbar, Button } from 'react-bootstrap'
 import * as actionTypes from '../../store/actions'
-import Refresh from 'react-icons/lib/md/autorenew'
+import BiRefresh from 'react-icons/bi'
 import axios from 'axios';
 
 class ProductButtons extends Component {
