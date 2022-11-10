@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
+import { BrowserRouter } from 'react-router-dom'
 import { Navbar, Nav, NavItem, Modal, Button, Table } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import * as actionTypes from '../../store/actions'
@@ -9,7 +10,7 @@ import axios from 'axios'
 class Navigation extends Component {
 
     state = {
-        showCart: false
+        showCart: true
     }
 
     showCart = () => {
@@ -88,7 +89,7 @@ class Navigation extends Component {
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
         return (
             <div> 
-                <Navbar>
+                <Navbar bg="dark" variant="dark">
                        <Navbar.Brand>
                             <a>Inventory Manager</a>
                         </Navbar.Brand>
@@ -123,6 +124,7 @@ class Navigation extends Component {
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
+               
                 {this.state.showCart ? 
                     <div className="static-modal">
                             <Modal.Dialog style={{ overflowY: 'initial'}}>

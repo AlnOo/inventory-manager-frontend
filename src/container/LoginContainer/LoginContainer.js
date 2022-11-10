@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { auth } from '../../store/actions'
 import Login from '../../components/Login/Login'
-// import axios from 'axios'
 
 class LoginContainer extends Component {
 

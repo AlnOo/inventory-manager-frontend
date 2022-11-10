@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client"
 import { render } from "react-dom/client"
 import { legacy_createStore as createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
+import { HashRouter } from 'react-router-dom'
 import authReducer from './store/reducers/authReducer'
 import mainReducer from './store/reducers/mainReducer'
 import thunk from 'redux-thunk'
@@ -22,8 +23,6 @@ const store = createStore(
     composeEnhancers(applyMiddleware(thunk))
 )
 
-//ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'))
-
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<Provider store={store}><App /></Provider>)
+root.render(<Provider store={store}><HashRouter><App /></HashRouter></Provider>)
 registerServiceWorker()
