@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, NavItem, Modal, Button, Table } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import * as actionTypes from '../../store/actions'
@@ -93,28 +94,32 @@ class Navigation extends Component {
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     <Navbar.Collapse>
-                        <Nav pullRight>
-                            {this.props.isAuthed ? 
-                                <NavItem eventKey={1} onClick={this.props.showChart}>
-                                    Sales Chart
-                                </NavItem>
+                        <Nav>
+                            {this.props.isAuthed ?
+                            <LinkContainer eventKey={1} onClick={this.props.showChart}>
+                                <NavItem >Sales Chart</NavItem>
+                            </LinkContainer>
                             : null}
                             {this.props.isAuthed ?
-                                <NavItem eventKey={1} onClick={this.showCart}>
-                                    Cart ({this.props.cart.length})
-                                </NavItem>
-                                :
-                                <NavItem eventKey={2} onClick={this.props.login}>
-                                    Login
-                                </NavItem>}
+                            <LinkContainer eventKey={1} onClick={this.showCart}>
+                                <NavItem>Cart ({this.props.cart.length})</NavItem>
+                            </LinkContainer>
+                            : null}
                             {this.props.isAuthed ?
-                                <NavItem eventKey={3} onClick={this.props.logout}>
-                                    Logout
-                                </NavItem>
-                                :
-                                <NavItem eventKey={3} onClick={this.props.createAccount}>
-                                    Create Account
-                                </NavItem>}
+                            <LinkContainer eventKey={2} onClick={this.props.login}>
+                                <NavItem>Login</NavItem>
+                            </LinkContainer>
+                            : null}
+                            {this.props.isAuthed ?
+                            <LinkContainer eventKey={3} onClick={this.props.logout}>
+                                <NavItem>Logout</NavItem>
+                            </LinkContainer>
+                            : null}
+                            {this.props.isAuthed ?
+                            <LinkContainer eventKey={3} onClick={this.props.createAccount}>
+                                <NavItem>Create Account</NavItem>
+                            </LinkContainer>
+                            : null}
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
