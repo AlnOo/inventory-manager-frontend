@@ -87,13 +87,11 @@ class Navigation extends Component {
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
         return (
             <div> 
-                <Navbar collapseOnSelect>
-                    <Navbar.Header>
-                        <Navbar.Brand>
+                <Navbar>
+                       <Navbar.Brand>
                             <a>Inventory Manager</a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
-                    </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav pullRight>
                             {this.props.isAuthed ? 
